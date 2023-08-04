@@ -10,12 +10,12 @@ import { DbClientsSearchMacComponent } from './components/db-clients-search-mac/
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'api/organizations', component: ApiOrganizationsComponent },
-  { path: 'api/networks', component: ApiNetworksComponent },
-  { path: 'api/devices', component: ApiDevicesComponent },
-  { path: 'api/clients/search/mac', component: ApiClientsSearchMacComponent },
-  { path: 'db/organizations', component: DbOrganizationsComponent },
-  { path: 'db/clients/search/mac', component: DbClientsSearchMacComponent }
+  { path: 'api-organizations', component: ApiOrganizationsComponent },
+  { path: 'api-networks', component: ApiNetworksComponent },
+  { path: 'api-devices', component: ApiDevicesComponent },
+  { path: 'api-clients-search-mac', component: ApiClientsSearchMacComponent },
+  { path: 'db-organizations', component: DbOrganizationsComponent },
+  { path: 'db-clients-search-mac', component: DbClientsSearchMacComponent }
 ];
 
 @NgModule({
