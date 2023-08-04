@@ -1,1 +1,11 @@
-<p>api-organizations works!</p>
+<div class="titulo">
+    <h1>Obtener Organizaciones de Meraki</h1>
+  </div>
+  <div *ngIf="error" class="error">No organizations found</div>
+  <div id="organizaciones">
+    <ul>
+      <li *ngFor="let organizacion of organizaciones">
+        ID: {{ organizacion.id }}, Nombre: {{ organizacion.name }}
+      </li>
+    </ul>
+  </div>
