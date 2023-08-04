@@ -1,1 +1,19 @@
-<p>api-networks works!</p>
+<div class="titulo">
+    <h1>Obtener Redes de Meraki</h1>
+  </div>
+  <div id="redes">
+    <table *ngIf="redes.length > 0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Organization ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let red of redes">
+          <td>{{ red.id }}</td>
+          <td>{{ red.organizationId }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
