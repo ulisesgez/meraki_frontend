@@ -1,4 +1,23 @@
-
+.databaseButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.databaseButtons button {
+    background:#2d2d2d;
+    border: 1px solid #2d2d2d;
+    border-radius:6px;
+    font-weight:700;
+    width:15rem;
+    height: 2rem;
+    margin-left: 0.2rem;
+  }
+  .databaseButtons a {
+    text-decoration: none;
+    color:#fff;
+  }
 .modal-header .close {
     cursor:pointer;
     padding:4px 8px
@@ -30,11 +49,13 @@ body {
     width:100%
 }
 #masthead-content {
-    margin:0 auto;position:relative;
+    margin:0 auto;
+    position:relative;
     width:960px
 }
 #masthead-content img {
-    float:left;margin:32px 0 0
+    float:left;
+    margin:32px 0 0
 }
 #content {
     height:341px;
@@ -72,10 +93,6 @@ h1 {
 }
 #org {
     display:none
-}
-#login-box .button.cta input {
-    float:left;
-    width:120px
 }
 .shortform fieldset,.shortform label {
     display:inline-block;
@@ -121,9 +138,6 @@ h1 {
 .shortform fieldset>label:first-of-type {
     padding:0
 }
-.shortform form .button {
-    margin:15px 0 0
-}
 .formarea label:after,.formarea label:before {
     content:" ";
     display:block;
@@ -134,10 +148,6 @@ h1 {
 }
 .formarea label {
     zoom:1;border:none
-}
-#formarea-buttons {
-    clear:both;display:inline-block;
-    width:100%
 }
 #login-btn,#next-btn {
     background:#67b346;
@@ -159,11 +169,6 @@ h1 {
     to {
         transform:rotate(1turn)
     }
-}
-button:disabled#login-btn.loading
-{
-    background:#9ed188;
-    cursor:not-allowed
 }
 #login-btn .mds-spinner {
     transform:scale(0);vertical-align:-2px
@@ -204,12 +209,6 @@ hr.partial-rounded {
 #cisco-personal-login-btn {
     background:#ebebeb;
     color:#000
-}
-#cisco-login-buttons a{
-    display:block;
-    margin-bottom:10px;
-    padding:12px;text-align:center;
-    text-decoration:none
 }
 #cisco-admin-login-btn:hover,#login-btn:hover,#next-btn:hover {
     background:#5b993d
@@ -386,9 +385,6 @@ hr.partial-rounded {
     .shortform fieldset,.shortform label {
         padding:0
     }
-    #formarea-buttons {
-        margin-top:10px
-    }
     #formarea-bottom {
         margin:5px
     }
@@ -490,9 +486,6 @@ html {
 body {
     margin:0;
 }
-body,button,input,select,textarea {
-    font-family:sans-serif;
-}
 a {
     color:#00e;
 }
@@ -579,9 +572,6 @@ input[type="checkbox"],input[type="radio"] {
 }
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance:none;
-}
-button::-moz-focus-inner,input::-moz-focus-inner {
-    border:0;padding:0;
 }
 textarea {
     overflow:auto;vertical-align:top;
