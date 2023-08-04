@@ -1,1 +1,25 @@
-<h1>helloWorld</h1>
+<div class="content">
+    <div class="fixed-nav">
+      <div class="left-images">
+        <a routerLink="/">
+          <img src="https://www.totalplay.com.mx/landings/imagenes/img/LOGO-BLANCO.png" alt="Imagen 1">
+        </a>
+        <a href="https://n411.meraki.com/" target="_blank">
+          <img src="https://meraki.cisco.com/wp-content/uploads/2020/04/cisco-meraki-logo-1024x200.png" alt="Imagen 2">
+        </a>
+      </div>
+      <button class="sandwich-button" (click)="toggleMenu()">☰</button>
+    </div>
+    <nav class="menu" *ngIf="showMenu">
+      <ul>
+        <li><a routerLink="/api-organizations" (click)="toggleMenu()">api/organizations</a></li>
+        <li><a routerLink="/db-organizations" (click)="toggleMenu()">db/organizations</a></li>
+        <li><a routerLink="/api-networks" (click)="toggleMenu()">api/networks</a></li>
+        <li><a routerLink="/api-devices" (click)="toggleMenu()">api/devices</a></li>
+        <li><a routerLink="/api-devices-mac" (click)="toggleMenu()">api/devices-mac</a></li>
+        <li><a routerLink="/api-clients-search-mac" (click)="toggleMenu()">api/clients-search-mac</a></li>
+        <li><a routerLink="/db-clients-search-mac" (click)="toggleMenu()">db/clients-search-mac</a></li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
