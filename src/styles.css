@@ -1,1 +1,163 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family:Sharp Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
+}
+* {
+    font-family:Sharp Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
+  }
+  .content {
+    margin-top: 60px; /* Ajusta este valor según la altura de tu barra de navegación fija */
+  }
+  
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .fixed-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .fixed-nav li {
+    margin-right: 20px;
+  }
+  
+  .fixed-nav li:last-child {
+    margin-right: 0;
+  }
+  
+  .fixed-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .left-images {
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-images img {
+    max-width: 150px;
+    margin-right: 30px;
+  }
+  
+  .sandwich-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  
+  .menu {
+    border-radius: 6px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 200px;
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+  }
+.titulo {
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente el contenido al centro */
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    background-color: #67b346;
+    width: 100%;
+    height: 5rem; /* Altura del contenedor .titulo */
+    margin-bottom: 1rem;
+}
+h1 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 200;
+    margin: 0;
+}
+.buscador {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.buscador input {
+    border-color: #aaa;
+    border-radius: 5px;
+    box-shadow: none;
+    background: #ededed;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 1em;
+    width: 15rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+::placeholder {
+    text-align: center;
+}
+.buscador button {
+    background:#67b346;
+    border: 1px solid #67b346;
+    border-radius:6px;
+    color:#fff;
+    font-weight:700;
+    width:5rem;
+    height: 2rem;
+    margin-left: 0.2rem;
+}
+.buscador button:hover {
+    background:#5b993d;
+}
+.buscador button[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+thead {
+    border-radius: 15px;
+    background-color: #67b346;
+    color: #fff;
+}
+tbody {
+    border-radius: 15px;
+    background-color: #ededed;
+    color: #666;
+}
+th {
+    font-size: 15px;
+}
+td {
+    font-size: 12px;
+}
