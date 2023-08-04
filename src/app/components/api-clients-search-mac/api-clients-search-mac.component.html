@@ -1,1 +1,64 @@
-<p>api-clients-search-mac works!</p>
+<div class="titulo">
+    <h1>Obtener Clientes de Meraki</h1>
+  </div>
+  <div class="buscador">
+    <input placeholder="mac address" type="text" id="macIdInput" #macIdInput>
+    <button (click)="buscarClientes(macIdInput.value.trim().toLowerCase())" [disabled]="isLoading">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
+          <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
+        </svg>
+      </div>
+    </button>
+    <button (click)="guardarClientesEnBD()" [disabled]="isLoading || clientes.length === 0">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
+          <path d="M20 6c0-2.168-3.663-4-8-4S4 3.832 4 6v2c0 2.168 3.663 4 8 4s8-1.832 8-4V6zm-8 13c-4.337 0-8-1.832-8-4v3c0 2.168 3.663 4 8 4s8-1.832 8-4v-3c0 2.168-3.663 4-8 4z"></path><path d="M20 10c0 2.168-3.663 4-8 4s-8-1.832-8-4v3c0 2.168 3.663 4 8 4s8-1.832 8-4v-3z"></path>
+        </svg>
+      </div>
+    </button>
+  </div>
+  
+  <div *ngIf="isLoading; else resultados">
+    <p>Cargando...</p>
+  </div>
+  
+  <ng-template #resultados>
+    <div id="clientes">
+      <table *ngIf="clientes.length > 0">
+        <thead>
+          <tr>
+            <th>Estatus</th>
+            <th>Sitio</th>
+            <th>Client-Mac</th>
+            <th>Device-Mac</th>
+            <th>SSID</th>
+            <th>Visto-1ra</th>
+            <th>Visto-Ult</th>
+            <th>IP</th>
+            <th>OS</th>
+            <th>VLAN</th>
+            <th>Capacidad-WiFi</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente.status || '-'}}</td>
+            <td>{{ cliente.network.name || '-'}}</td>
+            <td>{{ cliente.mac || '-'}}</td>
+            <td>{{ cliente.recentDeviceMac || '-'}}</td>
+            <td>{{ cliente.ssid || '-'}}</td>
+            <td>{{ cliente.firstSeen | date: 'dd/MM/yyyy HH:mm:ss' || '-'}}</td>
+            <td>{{ cliente.lastSeen | date: 'dd/MM/yyyy HH:mm:ss' || '-'}}</td>
+            <td>{{ cliente.ip || '-'}}</td>
+            <td>{{ cliente.os || '-'}}</td>
+            <td>{{ cliente.vlan || '-'}}</td>
+            <td>{{ cliente.wirelessCapabilities || '-'}}</td>
+            <td>{{ cliente.description || '-' }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="error">No clients found</p>
+    </div>
+  </ng-template>
